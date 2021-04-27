@@ -14,6 +14,16 @@ export function HideElement(selector: string): boolean {
   }
 }
 
+export function showElement(selector: string): boolean {
+  const element = <HTMLElement>document.querySelector(selector)
+  if (element) {
+    element.style.display = ''
+    return true
+  } else {
+    return false
+  }
+}
+
 // Functionalities
 
 export function whenElementIsLoaded(selector: string, callback: () => void) {
